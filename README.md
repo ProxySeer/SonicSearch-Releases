@@ -14,8 +14,6 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
 
 > The app is not code-signed yet, so Windows SmartScreen may show a warning the first time. Choose **More info**, then **Run anyway**.
 
-> The first release is still being prepared; until it appears under [Releases](../../releases), there is nothing to download yet.
-
 ## What it does
 
 - **Instant search.** Results follow your typing. Matching modes: Contains, Starts with, Exact, Regex, and `*` / `?` wildcards.
