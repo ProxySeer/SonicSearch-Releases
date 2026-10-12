@@ -53,7 +53,7 @@ Reading the raw NTFS volume needs elevation, so by default Sonic Search asks for
 ## Known limits
 
 - NTFS drives only (FAT / exFAT / network shares are not indexed).
-- Full-text search reads files through the Windows text extractors installed on your PC; scanned PDFs that contain only images have no text to find.
+- Full-text search reads PDF, Word, Excel, PowerPoint, OpenDocument and RTF files itself - nothing needs to be installed. Scanned PDFs that contain only images have no text to find, encrypted files can't be read, and `.msg` e-mails depend on an installed filter.
 - Not code-signed yet.
 
 ## Source code
