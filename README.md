@@ -54,7 +54,11 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
 - **Also finds** Windows tools (Device Manager, Services, ...) and Chrome / Edge bookmarks.
 - **Global hotkey** (default Ctrl+S) to summon the window from anywhere; it lives in the system tray and can start with Windows.
 
-![Settings](screenshots/settings.png)
+![Settings: full-text search and OCR](screenshots/settings.png)
+
+| Keyboard shortcuts (F1) | Health page |
+|---|---|
+| ![Keyboard shortcuts](screenshots/shortcuts.png) | ![Health page](screenshots/health.png) |
 
 ## How fast is it?
 
