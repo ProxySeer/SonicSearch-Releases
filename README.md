@@ -29,6 +29,7 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
   | `location:` / `path:` / `in:` | `location:desktop` | inside a folder (or a well-known name such as Desktop, Downloads) |
   | `drive:` | `drive:d` | one drive only |
   | `content:` / `text:` | `content:"invoice 2024"` | search inside files |
+  | `sort:` | `ext:mp4 sort:size` | put every match in order: `size`, `date`, `name`, `path`, `type` (add `-` to reverse) |
 
 - **Full-text search in files.** Optional. Choose folders in Settings and Sonic Search builds a persistent index of the text in them, including **PDF, Word, Excel, PowerPoint and OpenDocument** files. `content:` searches answer in milliseconds, ranked by relevance. See [How fast is it?](#how-fast-is-it).
 - **Combine words.** `report | invoice` (either), `report -draft` (not), `(jpg | png) -thumb` (groups), `"annual report"` (a phrase). It works with every qualifier above.
@@ -36,7 +37,15 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
 - **Saved searches.** Ctrl+D names the search in the box; clear the box to list them.
 - **Actions on results.** Select several rows; Ctrl+C copies the files (paste in Explorer), F2 renames, Del sends to the Recycle Bin, Open With, Open Terminal Here, and you can drag the files out into Explorer or another program.
 - **Disk usage and duplicates.** Folder sizes as a tree with each folder's share, the 300 largest files, and duplicate files (same size, then start and end, then the whole content) with "keep one copy" and Recycle Bin. Folder sizes appear in about 80 ms for 2.9 million files.
-- **Updates from inside the program.** Once a day it looks at this releases page (can be turned off); an "Update available" button downloads and installs the new version and keeps your settings.
+- **Updates from inside the program.** A few seconds after it starts, and every few hours while it runs in the tray, it looks at this releases page (can be turned off); an "Update available" button and one tray notice per version lead to a window that downloads and installs the new version and keeps your settings.
+- **Sort and export.** `sort:size`, `sort:date`, ... or the Sort button next to the status line order *all* matches (`ext:mp4 sort:size` = the largest videos); the same menu saves the results as a CSV file for Excel.
+- **A roomier result list.** Name, a shortened folder, and size and date on every row; under the mouse a row offers Open, Preview and Show in folder. The matched text of a `content:` search shows under the name; hover for the full path. A compact option fits more rows.
+- **Text in pictures (OCR).** Optional: screenshots, scanned pages and PDFs that are only images become searchable with `content:`, using the text recognition built into Windows. Nothing leaves the computer.
+- **Light and dark theme.** The sun button in the title bar, or Settings > Behavior > Theme (Dark, Light, Follow Windows).
+- **Search the folder you are in.** Optional (Settings > Behavior): press the hotkey while an Explorer window or the desktop is in front and the search opens limited to that folder. With several tabs it uses the tab in use.
+- **Command line and Explorer menu.** `SonicSearch.exe report sort:size`, `SonicSearch.exe --in "D:\Photos" holiday`; an optional *Search with SonicSearch* entry in Explorer's right-click menu for folders and drives.
+- **Keys at a glance.** A line under the results lists the main keys; F1 opens the full list. Keys such as F3, F2, Del and Ctrl+C act on the row the mouse points at.
+- **Health page** (Settings > Health): how the disk is read, index size, folders that could not be read, the full-text index, the service, memory, and Copy / Open logs for a bug report.
 - **Preview window (F3).** Source code with syntax highlighting, rendered Markdown, PDF and Office pages, with your search words highlighted and F3 / Shift+F3 to jump between matches.
 - **Live updates.** New, renamed and deleted files appear in the results within a fraction of a second, with no rescan. See [Live updates](#live-updates).
 - **Several drives.** Pick which drives to index.
