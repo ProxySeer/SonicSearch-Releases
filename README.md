@@ -31,6 +31,12 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
   | `content:` / `text:` | `content:"invoice 2024"` | search inside files |
 
 - **Full-text search in files.** Optional. Choose folders in Settings and Sonic Search builds a persistent index of the text in them, including **PDF, Word, Excel, PowerPoint and OpenDocument** files. `content:` searches answer in milliseconds, ranked by relevance. See [How fast is it?](#how-fast-is-it).
+- **Combine words.** `report | invoice` (either), `report -draft` (not), `(jpg | png) -thumb` (groups), `"annual report"` (a phrase). It works with every qualifier above.
+- **The best answer first, and Fuzzy mode.** The name that answers your word best is listed first (exact name, starts with it, starts a word, inside). In Fuzzy mode `rpt` finds `report`.
+- **Saved searches.** Ctrl+D names the search in the box; clear the box to list them.
+- **Actions on results.** Select several rows; Ctrl+C copies the files (paste in Explorer), F2 renames, Del sends to the Recycle Bin, Open With, Open Terminal Here, and you can drag the files out into Explorer or another program.
+- **Disk usage and duplicates.** Folder sizes as a tree with each folder's share, the 300 largest files, and duplicate files (same size, then start and end, then the whole content) with "keep one copy" and Recycle Bin. Folder sizes appear in about 80 ms for 2.9 million files.
+- **Updates from inside the program.** Once a day it looks at this releases page (can be turned off); an "Update available" button downloads and installs the new version and keeps your settings.
 - **Preview window (F3).** Source code with syntax highlighting, rendered Markdown, PDF and Office pages, with your search words highlighted and F3 / Shift+F3 to jump between matches.
 - **Live updates.** New, renamed and deleted files appear in the results within a fraction of a second, with no rescan. See [Live updates](#live-updates).
 - **Several drives.** Pick which drives to index.
