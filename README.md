@@ -45,6 +45,9 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
 - **Search the folder you are in.** Optional (Settings > Behavior): press the hotkey while an Explorer window or the desktop is in front and the search opens limited to that folder. With several tabs it uses the tab in use.
 - **Command line and Explorer menu.** `SonicSearch.exe report sort:size`, `SonicSearch.exe --in "D:\Photos" holiday`; an optional *Search with SonicSearch* entry in Explorer's right-click menu for folders and drives.
 - **Keys at a glance.** A line under the results lists the main keys; F1 opens the full list. Keys such as F3, F2, Del and Ctrl+C act on the row the mouse points at.
+- **USB and other drives.** Settings > Indexing lists every fixed and removable drive (USB disks are marked). Plug a drive in or take it out while the program runs and the results follow; a drive you did not choose is offered in a tray notice. FAT / exFAT sticks are searched by listing their folders.
+- **Quick filters and recent files.** One-click chips under the search box (Documents, Images, Videos, Music, Archives, Folders, Today, Large); with nothing typed, the files that changed lately in your folders are listed.
+- **Your own right-click actions.** Settings > Behavior: `Open in VS Code | code | "{path}"`, one per line, with `{path}`, `{folder}`, `{name}`, `{base}`, `{ext}`.
 - **Health page** (Settings > Health): how the disk is read, index size, folders that could not be read, the full-text index, the service, memory, and Copy / Open logs for a bug report.
 - **Preview window (F3).** Source code with syntax highlighting, rendered Markdown, PDF and Office pages, with your search words highlighted and F3 / Shift+F3 to jump between matches.
 - **Live updates.** New, renamed and deleted files appear in the results within a fraction of a second, with no rescan. See [Live updates](#live-updates).
