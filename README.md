@@ -24,6 +24,7 @@ A very fast file search tool for NTFS drives on Windows. It reads the NTFS **Mas
   |---|---|---|
   | `ext:` / `type:` | `ext:pdf` | by file type |
   | `file:` / `folder:` | `folder: backup` | files only / folders only |
+  | `name:` | `location:C:\windows name:system32` | the word is searched in the names (like typing it plain) |
   | `size:` | `size:>10mb` | by size |
   | `date:` / `modified:` | `date:>7d` | by modified date |
   | `location:` / `path:` / `in:` | `location:desktop` | inside a folder (or a well-known name such as Desktop, Downloads) |
